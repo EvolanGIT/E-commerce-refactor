@@ -10,7 +10,10 @@ router.get('/', (req, res) => {
   Product.findAll({
     include: [
       Category,
-      Tag
+      {
+        model: Tag,
+        through: ProductTag
+      }
     ]
   // if successful shows status of 200 othewise a 400 error will pop-up.
   }).then(result => {res.status(200).json(result)})
@@ -24,7 +27,10 @@ router.get('/:id', (req, res) => {
   Product.findOne({
     include: [
       Category,
-      Tag
+      {
+        model: Tag,
+        through: ProductTag
+      }
     ],
     where: {
       id: req.params.id
