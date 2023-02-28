@@ -25,7 +25,6 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     }
-  // if successful shows status of 200 othewise a 400 error will pop-up.
   }).then(result => {res.status(200).json(result)})
   .catch(err => res.status(400).json(err));
 });
@@ -34,7 +33,6 @@ router.post('/', (req, res) => {
   // create a new category
   Category.create(
     req.body
-  // if successful shows status of 200 othewise a 400 error will pop-up.
   ).then(result => {res.status(200).json(result)})
   .catch(err => res.status(400).json(err));
 });
@@ -47,7 +45,6 @@ router.put('/:id', (req, res) => {
         id: req.params.id
       }
     }
-  // if successful shows status of 200 othewise a 400 error will pop-up.
   ).then(result => {res.status(200).json(result)})
   .catch(err => res.status(400).json(err));
 });
@@ -58,7 +55,6 @@ router.delete('/:id', (req, res) => {
     where: {
       id: req.params.id
     }
-  // if successful shows status of 200 othewise a 400 error will pop-up.
   }).then(result => {res.status(200).json(result)})
   .catch(err => res.status(400).json(err));
 });
