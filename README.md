@@ -1,4 +1,4 @@
-# E-Commerce Refactot by Yon B.
+# E-Commerce Refactor by Yon B.
 
 <a id="top"></a>
 
@@ -59,7 +59,7 @@ Copyright (c) [2023] [Yonatan Yael Bermudez Diez]
 
 ## Features
 
-- Fully funcitoning CRUD operations for:
+- Fully functioning CRUD operations for:
 
     - Products
     - Tags
