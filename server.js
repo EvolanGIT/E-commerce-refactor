@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
 // sync sequelize models to the database, then turn on the server
-// we want the force as false unless we make any major changes to the models. true recreates the tables everytime and seed fills the tables.
+// We want the force as false unless we make any major changes to the models. true recreates the tables everytime and seed fills the tables.
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () =>
     console.log(`Now listening at http://localhost:${PORT}`));
